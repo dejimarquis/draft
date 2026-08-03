@@ -1,5 +1,0 @@
-relationship 68478579-d4b0-9067-5cd8-3989726378b8
-	crossFilteringBehavior: bothDirections
-	fromColumn: Equipment.id
-	toColumn: PLineRel2.equipRef
-
