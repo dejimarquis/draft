@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/map/definition/2.0.0/schema.json",
-  "basemap": {},
-  "dataSources": [],
-  "iconSources": [],
-  "layerSources": [],
-  "layerSettings": []
-}
