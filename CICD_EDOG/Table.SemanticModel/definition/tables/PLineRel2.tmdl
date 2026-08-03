@@ -1,0 +1,37 @@
+table PLineRel2
+	lineageTag: b823f69e-18f0-4bd7-ad95-1ba7ca423a43
+
+	column ref
+		dataType: string
+		lineageTag: fa79918f-ed0c-4574-947d-8d2ac3ad00b8
+		summarizeBy: none
+		sourceColumn: ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipRef
+		dataType: string
+		lineageTag: 926be419-ec38-44be-8b87-b2e57e554513
+		summarizeBy: none
+		sourceColumn: equipRef
+
+		annotation SummarizationSetBy = Automatic
+
+	column size
+		dataType: string
+		lineageTag: 80521fe1-e4df-4959-9874-d2b39034d4f3
+		summarizeBy: none
+		sourceColumn: size
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PLineRel2 = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMjYwMFTSUTKEUBE+SrE6YEEjiCCIighWio0FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ref = _t, equipRef = _t, size = _t])
+				in
+				  Source
+
+	annotation PBI_ResultType = Table
+

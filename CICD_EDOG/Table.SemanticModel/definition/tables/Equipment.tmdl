@@ -1,0 +1,40 @@
+table Equipment
+	lineageTag: abe95b4a-d9b0-47e8-82d8-1d66b44d3668
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 907b084d-ac9b-4554-ad6c-d9e581466892
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 6bb0cfe0-908a-455b-a2af-10f42dcbbe0f
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column color
+		dataType: string
+		lineageTag: 1b012193-fe31-4dcc-bdb8-d5789c70f72f
+		summarizeBy: none
+		sourceColumn: color
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Equipment = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMjQwMFTSUQpOLkotB9JBqSlKsTpgYSMg1yknNS8ltQjMKk1Vio0FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [id = _t, tyoe = _t, color = _t]),
+				  #"Changed column type" = Table.TransformColumnTypes(Source, {{"id", Int64.Type}, {"tyoe", type text}, {"color", type text}}),
+				  #"Renamed columns" = Table.RenameColumns(#"Changed column type", {{"tyoe", "type"}})
+				in
+				  #"Renamed columns"
+
+	annotation PBI_ResultType = Table
+

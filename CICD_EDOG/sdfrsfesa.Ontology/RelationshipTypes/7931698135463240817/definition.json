@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "7931698135463240817",
+  "name": "turbines_workorder1_has",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "8172676806650"
+  },
+  "target": {
+    "entityTypeId": "222899590121720"
+  }
+}

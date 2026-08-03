@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "0068a9b3-0c28-4250-8e70-13b15642e923",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "TurbineId",
+        "targetPropertyId": "5071722299344174752"
+      },
+      {
+        "sourceColumnName": "TurbineStatus",
+        "targetPropertyId": "5071722300342183056"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "3cdf14fd-9fda-abeb-4366-9b8b5aef39a5",
+      "sourceTableName": "wind_turbines",
+      "sourceSchema": "dbo"
+    }
+  }
+}

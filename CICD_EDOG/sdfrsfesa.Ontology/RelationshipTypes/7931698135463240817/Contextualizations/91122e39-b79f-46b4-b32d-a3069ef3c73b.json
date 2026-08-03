@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "91122e39-b79f-46b4-b32d-a3069ef3c73b",
+  "dataBindingTable": {
+    "workspaceId": "00000000-0000-0000-0000-000000000000",
+    "itemId": "d84dad95-237c-9772-4917-83d482091b2e",
+    "sourceTableName": "workorder1",
+    "sourceSchema": null,
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "Turbine",
+      "targetPropertyId": "7931380839763259641"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "RequestId",
+      "targetPropertyId": "7931380029497653048"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "ca97a944-bb45-4fb7-a7fc-aafacb12e66d",
+  "dataBindingTable": {
+    "workspaceId": "cbacac9e-8872-47af-9363-cf04b7b47646",
+    "itemId": "55c046e5-036e-46ae-a5e7-ee70ce8faf78",
+    "sourceTableName": "Equipment",
+    "sourceSchema": "shortcuts",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "id",
+      "targetPropertyId": "7591284479616543067"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "id",
+      "targetPropertyId": "7591284966589720167"
+    }
+  ]
+}
