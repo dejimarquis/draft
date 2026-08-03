@@ -1,4 +1,0 @@
-relationship 63b54c76-6a00-aae6-4ad6-586c994b6ee7
-	fromColumn: workorder1.Turbine
-	toColumn: turbines.id
-

@@ -1,9 +1,0 @@
-expression 'DirectLake - yuze_data_set' =
-		let
-		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/cbacac9e-8872-47af-9363-cf04b7b47646/82091b2e-83d4-4917-9772-237cd84dad95", [HierarchicalNavigation=true])
-		in
-		    Source
-	lineageTag: f2653776-87df-4056-b987-2acedd39f177
-
-	annotation PBI_IncludeFutureArtifacts = False
-
