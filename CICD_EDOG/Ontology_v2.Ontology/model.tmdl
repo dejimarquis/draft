@@ -1,0 +1,7 @@
+model Model
+
+ref table wind_turbines
+
+ref entity hjkk
+ref entity harness#Turbine
+

@@ -1,0 +1,68 @@
+entity harness#Turbine
+	displayName: Turbine
+	lineageTag: 159f3287-30db-4187-a390-c73881c0230d
+	backingTable: wind_turbines
+
+	property TurbineId
+		dataType: string
+		lineageTag: b52013ef-f657-4992-a3b6-37d98d620109
+
+		backingConfiguration
+			valueColumn: wind_turbines.TurbineId
+
+	property PlantId
+		dataType: string
+		lineageTag: 5eab5792-3313-469d-85c1-40382fb25830
+
+		backingConfiguration
+			valueColumn: wind_turbines.PlantId
+
+	property TurbineName
+		dataType: string
+		lineageTag: 5f63ab69-9b18-409d-a8b9-4e3e2833577e
+
+		backingConfiguration
+			valueColumn: wind_turbines.TurbineName
+
+	property Axis
+		dataType: string
+		lineageTag: cd29c59d-ac04-4913-9151-18285ff6290f
+
+		backingConfiguration
+			valueColumn: wind_turbines.Axis
+
+	property TurbineStatus
+		dataType: string
+		lineageTag: 3e49dc1e-535e-4cdd-a62b-d88291601d9b
+
+		backingConfiguration
+			valueColumn: wind_turbines.TurbineStatus
+
+	property Capacity
+		dataType: double
+		lineageTag: 206c57a6-ef23-41e3-9d7a-9c490f24530b
+
+		backingConfiguration
+			valueColumn: wind_turbines.Capacity
+
+	property HubHeight
+		dataType: int64
+		lineageTag: a9d65e37-f116-4643-beab-838e430da007
+
+		backingConfiguration
+			valueColumn: wind_turbines.HubHeight
+
+	property SerialNumber
+		dataType: string
+		lineageTag: b0a85566-bc09-49a4-b590-b587814ce401
+
+		backingConfiguration
+			valueColumn: wind_turbines.SerialNumber
+
+	property Manufacturer
+		dataType: string
+		lineageTag: 68709bbe-15d9-4de0-b225-fc26295489db
+
+		backingConfiguration
+			valueColumn: wind_turbines.Manufacturer
+

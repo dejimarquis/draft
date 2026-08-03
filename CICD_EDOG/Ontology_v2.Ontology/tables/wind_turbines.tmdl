@@ -1,0 +1,64 @@
+table wind_turbines
+	lineageTag: 9ed97fb0-6e0c-4f54-864f-cd2069c1597d
+
+	column TurbineId
+		dataType: string
+		lineageTag: b329d3ec-b013-4c46-96f2-670efb50f050
+
+	column PlantId
+		dataType: string
+		lineageTag: e2f591f4-692d-46eb-9994-234c5733ac95
+
+	column TurbineName
+		dataType: string
+		lineageTag: 6ca7c31d-adcd-4e13-9456-68796949a595
+
+	column Axis
+		dataType: string
+		lineageTag: feb0b6ef-1ec2-43d7-b9ef-8aa5036647bd
+
+	column TurbineStatus
+		dataType: string
+		lineageTag: f5b3d59f-168d-43ee-8cfa-9d0ae7327905
+
+	column Capacity
+		dataType: double
+		lineageTag: 9d7f7b3d-b7a6-431c-9248-eb8a58baa34c
+
+	column HubHeight
+		dataType: int64
+		lineageTag: 90950dc2-3f82-45b7-be21-60f16609376d
+
+	column SerialNumber
+		dataType: string
+		lineageTag: bbb36a43-8bcd-43eb-9e06-aa76c9eea64e
+
+	column Manufacturer
+		dataType: string
+		lineageTag: 368e7aa4-3e66-4884-b0b9-4fa70dec6dee
+
+	partition wind_turbines = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("k4spsne57y3ezevijgp57lypr4-t2wkzs3srcxupe3dz4clpndwiy.edog-datawarehouse.pbidedicated.windows-int.net", "wind_turbines"),
+				    Navigation = Source{[Schema="dbo",Item="wind_turbines"]}[Data]
+				in
+				    Navigation
+
+		annotation ONT_WorkspaceId = cbacac9e-8872-47af-9363-cf04b7b47646
+
+		annotation ONT_ItemId = 5aef39a5-9b8b-4366-abeb-9fda3cdf14fd
+
+		annotation ONT_ItemKind = Lakehouse
+
+		annotation ONT_ItemName = rawData
+
+		annotation ONT_WorkspaceName = aymarqui_test
+
+		annotation ONT_SqlEndpoint = k4spsne57y3ezevijgp57lypr4-t2wkzs3srcxupe3dz4clpndwiy.edog-datawarehouse.pbidedicated.windows-int.net
+
+		annotation ONT_SqlDatabase = wind_turbines
+
+		annotation ONT_SqlEndpointItemId = 8c540206-d2cb-486b-812e-dbb5cecfe3e6
+
