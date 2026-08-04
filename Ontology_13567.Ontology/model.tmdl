@@ -1,0 +1,6 @@
+model Model
+
+ref table wind_turbines
+
+ref entity wind_turbines
+

@@ -1,0 +1,60 @@
+table wind_turbines
+	lineageTag: 04abc1a5-564d-4b9e-9fcd-a27129806f2b
+
+	column TurbineId
+		dataType: string
+		lineageTag: 2b8dd610-8f4c-4560-8f94-75dead939e8b
+
+	column PlantId
+		dataType: string
+		lineageTag: 06448692-3f5d-4c6d-8ba2-e754af7e4d7c
+
+	column TurbineName
+		dataType: string
+		lineageTag: 4dee80e6-167d-4c46-96d7-3d89b6bc33a2
+
+	column Axis
+		dataType: string
+		lineageTag: 1d4a000d-06b9-4231-9e48-8766b112d14b
+
+	column TurbineStatus
+		dataType: string
+		lineageTag: 4498cf38-8ba9-4250-8a52-db2376bf0504
+
+	column Capacity
+		dataType: double
+		lineageTag: 52aca443-7377-4115-8d38-0ed5cd69ce3d
+
+	column HubHeight
+		dataType: int64
+		lineageTag: e1c59df3-9814-42fb-bcf9-1419a161ddab
+
+	column SerialNumber
+		dataType: string
+		lineageTag: 34433925-bd24-4dfe-b4e0-aca2c0d90981
+
+	column Manufacturer
+		dataType: string
+		lineageTag: 217735d5-60b3-465f-8be6-4008bf508658
+
+	partition wind_turbines = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("", "rawData"),
+				    Navigation = Source{[Schema="dbo",Item="wind_turbines"]}[Data]
+				in
+				    Navigation
+
+		annotation ONT_WorkspaceId = 00000000-0000-0000-0000-000000000000
+
+		annotation ONT_ItemId = 13bf1a4c-5cbb-90eb-4977-91235d400e78
+
+		annotation ONT_ItemKind = Lakehouse
+
+		annotation ONT_ItemName = raw_D
+
+		annotation ONT_SqlDatabase = rawData
+
+		annotation ONT_WorkspaceName = WORKSPACE_NAME_PLACEHOLDER
+
