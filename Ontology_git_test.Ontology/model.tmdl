@@ -1,7 +1,0 @@
-model Model
-
-ref table wind_turbines
-
-ref entity sdfs
-ref entity harness#Turbine
-
